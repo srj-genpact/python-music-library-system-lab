@@ -127,6 +127,44 @@ Best Practice documentation steps:
 * Remove unnecessary/commented out code
 * If needed, update git ignore to remove sensitive data
 
+---
+
+## Music Library System - Completed Solution
+
+This repository contains the complete implementation for the Music Library System lab assignment.
+
+### Solution Overview
+
+The `Song` class encapsulates a song's details:
+- **`name`**: The name of the song.
+- **`artist`**: The artist who performed the song.
+- **`genre`**: The genre of the song.
+
+Additionally, it tracks global music library statistics using the following class attributes:
+- **`count`**: Total number of songs created.
+- **`genres`**: List of all unique genres of existing songs.
+- **`artists`**: List of all unique artists of existing songs.
+- **`genre_count`**: Number of songs belonging to each genre.
+- **`artists_count`**: Number of songs belonging to each artist.
+- **`artist_count`**: An alias of `artists_count` to ensure compatibility with all test specifications.
+
+Every time a new `Song` is instantiated, the following class methods are automatically triggered:
+1. `add_song_to_count()`: Increments the total song count.
+2. `add_to_genres(genre)`: Appends the genre if unique.
+3. `add_to_artists(artist)`: Appends the artist if unique.
+4. `add_to_genre_count(genre)`: Updates the frequency dictionary for genres.
+5. `add_to_artists_count(artist)`: Updates the frequency dictionary for artists.
+
+### How to Run the Tests
+
+You can run the unit tests using `pytest` to verify that all requirements are met:
+
+```bash
+python -m pytest
+```
+
+---
+
 ## Save your work and push to GitHub
 
 Before you submit your solution, you need to save your progress with git.
